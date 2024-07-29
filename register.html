@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Hoe Grocery - Register</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/you.css" />
+    <link rel="stylesheet" href="assets/bootstrap5/css/bootstrap.css" />
+</head>
+
+<body>
+    <header>
+        <p>Go back to <a href="index.html">Home Page</a></p>
+    </header>
+
+
+    <main class="form-section">
+      
+        <h1>Register</h1>
+        <form id="register-form" onsubmit="submitForm()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+
+            <label for="corfirmpassword">Corfirm Password</label>
+            <input type="password" id="corfirmpassword" name="corfirmpassword" required />
+
+            <label for="branch">Branch</label>
+            <select id="branch" name="branch" required>
+                <option value="maganju">Maganjo</option>
+                <option value="matuga">Matuga</option>
+            </select>
+
+            <label for="role">Role</label>
+            <select id="role" name="role" required>
+                <option value="administrator">Administrator</option>
+                <option value="manager">Manager</option>
+                <option value="sales_agent">Sales Agent</option>
+            </select>
+
+            <input id="form" type="submit" class="btn btn-primary custom-button" value="register" />
+
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </form>
+        
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Happy Hoe Grocery Ltd. is a leading wholesale produce distributor. We pride ourselves on providing
+                    fresh and quality produce to our customers.</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p><i class="fas fa-map-marker-alt"></i> 1234 Street, Kampala, Uganda</p>
+                <p><i class="fas fa-phone"></i> +256 708 600 622</p>
+                <p><i class="fas fa-envelope"></i> info@happyhoegrocery.com</p>
+            </div>
+            <div class="footer-section social-media">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <li><a href="https://github.com/nakungu-esther" target="_blank"><i class='bx bxl-github'></i>
+                            GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/nakungu-esther-41512a316/" target="_blank"><i
+                                class='bx bxl-linkedin'></i> LinkedIn</a></li>
+                    <li><a href="https://www.youtube.com/account" target="_blank"><i class='bx bxl-youtube'></i>
+                            YouTube</a></li>
+                    <li><a href="https://wa.link/nqktdo" target="_blank"><i class='bx bxl-whatsapp'></i> whatsapp</a>
+                    </li>
+
+                </div>
+            </div>
+            <div class="footer-section newsletter">
+                <h2>Newsletter</h2>
+                <form>
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Happy Hoe Grocery Ltd. | Designed by Your Nakungu Esther</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
