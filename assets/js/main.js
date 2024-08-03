@@ -49,6 +49,53 @@ submitButton.addEventListener ("click", function (event) {
   submitForm(); // Call function to validate and submit form
 });
 
+// Data for the pie chart
+const data = {
+  labels: ['Beans', 'Maize', 'G.nuts', 'Peas', 'Yellow Beans'],
+  datasets: [{
+    label: 'Grocery Stock',
+    data: [60, 40, 20, 35, 15], // Example stock values
+    backgroundColor: [
+      'rgba(255, 99, 132, 0.2)',
+      'rgba(54, 162, 235, 0.2)',
+      'rgba(255, 206, 86, 0.2)',
+      'rgba(75, 192, 192, 0.2)',
+      'rgba(153, 102, 255, 0.2)'
+    ],
+    borderColor: [
+      'rgba(255, 99, 132, 1)',
+      'rgba(54, 162, 235, 1)',
+      'rgba(255, 206, 86, 1)',
+      'rgba(75, 192, 192, 1)',
+      'rgba(153, 102, 255, 1)'
+    ],
+    borderWidth: 1
+  }]
+};
+
+// Configuration for the pie chart
+const config = {
+  type: 'pie',
+  data: data,
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      tooltip: {
+        enabled: true
+      }
+    }
+  }
+};
+
+// Render the pie chart
+const groceryStockChart = new Chart(
+  document.getElementById('groceryStockChart'),
+  config
+);
+
 
 // slider
   let swiper = new Swiper('.mySwiper', {
@@ -64,3 +111,8 @@ submitButton.addEventListener ("click", function (event) {
       disableOnInteraction: false,
     },
   });
+
+  
+
+
+  
