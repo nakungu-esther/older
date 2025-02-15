@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Agent Page - Happy Hoe Grocery Ltd.</title>
+    <link rel="stylesheet" href="assets/css/sales.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <img style="width: 40px; height: 40px; border-radius: 50%;" src="assets/images/download (3).png">
+        <div class="agent-profile">
+            <span class="agent-name">Welcome, Sales Agent</span>
+            <a href="index.html">Logout</a>
+        </div>
+    </header> 
+    
+
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#" id="showSalesFormBtn"><i class="fas fa-shopping-cart" style="padding-right:15px;"></i>Record Sales</a></li>
+                
+                <li><a href="#" id="showCreditFormBtn"><i class="fas fa-credit-card"  style="padding-right:15px;"></i> Credit Sales</a></li>
+                
+                <li><a href="#" id="showProduceFormBtn"><i class="fas fa-file-alt"  style="padding-right:15px;"></i>Request Entry</a></li>
+                
+        
+            </ul>
+        </nav>
+    </aside>
+
+    <div style="height: 300px;position: absolute;" class="video-container">
+        <video autoplay muted loop>
+            <source src="assets/images/202407310754 (1).mp4" type="video/mp4">
+    
+        </video>
+    <main id="form" class="content" style="position: absolute;top:500px;">
+        <section class="record-sales form-container" id="sales-form-container">
+            <h1>Record Sales </h1>
+            <form id="sales-form">
+                <div class="form-group">
+                    <label for="produce-name">Produce Name:</label>
+                    <input type="text" id="produce-name" name="produce-name" required>
+                </div>
+          
+                <div class="form-group">
+                    <label for="tonnage">Tonnage (kg):</label>
+                    <input type="number" id="tonnage" name="tonnage" required>
+                </div>
+                <div class="form-group">
+                    <label for="amount-paid">Amount Paid (Ugx):</label>
+                    <input type="number" id="amount-paid" name="amount-paid" required>
+                </div>
+                <div class="form-group">
+                    <label for="buyer-name">Buyer's Name:</label>
+                    <input type="text" id="buyer-name" name="buyer-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="agent-name">Sales Agent's Name:</label>
+                    <input type="text" id="agent-name" name="agent-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="sale-date">Date:</label>
+                    <input type="date" id="sale-date" name="sale-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="sale-time">Time:</label>
+                    <input type="time" id="sale-time" name="sale-time" required>
+                </div>
+                 <a href="generate.html">
+               <button type="submit" onclick="generateReceipt()">Generate Receipt</button> 
+                </a>
+            </form>
+        </section>
+
+        <section class="handle-credit-sales form-container" id="credit-form-container">
+            <h1>Credit Sales</h1>
+            <form id="credit-sales-form">
+                <div class="form-group">
+                    <label for="credit-buyer-name">Buyer's Name:</label>
+                    <input type="text" id="credit-buyer-name" name="credit-buyer-name" required>
+                    <span id="credit-buyer-name-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="nin">National ID (NIN):</label>
+                    <input type="text" id="nin" name="nin" required>
+                    <span id="nin-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required>
+                    <span id="location-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact:</label>
+                    <input type="tel" id="contact" name="contact" required>
+                    <span id="contact-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="amount-due">Amount Due (Ugx):</label>
+                    <input type="number" id="amount-due" name="amount-due" required>
+                    <span id="amount-due-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="credit-agent-name">Sales Agent's Name:</label>
+                    <input type="text" id="credit-agent-name" name="credit-agent-name" required>
+                    <span id="credit-agent-name-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="due-date">Due Date:</label>
+                    <input type="date" id="due-date" name="due-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="produce">Produce:</label>
+                    <input type="text" id="produce" name="produce" required>
+                    <span id="produce-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="tonnage">Tonnage (kg):</label>
+                    <input type="number" id="credit-tonnage" name="tonnage" required>
+                </div>
+                <div class="form-group">
+                    <label for="dispatch-date">Date of Dispatch:</label>
+                    <input type="date" id="dispatch-date" name="dispatch-date" required>
+                </div>
+                <button type="submit">Record Credit Sale</button>
+            </form>
+        </section>
+
+
+        <section id="produce-form-container" class="produce-request" style="display: none;">
+            <h1>Request Produce Entry</h1>
+            <form id="produce-form">
+                <div class="form-group">
+                    <label for="produce-name">Produce Name:</label>
+                    <input type="text" id="produce-name" name="produce-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="tonnage">Requested Tonnage (kg):</label>
+                    <input type="number" id="tonnage" name="tonnage" required>
+                </div>
+                <div class="form-group">
+                    <label for="request-date">Request Date:</label>
+                    <input type="date" id="request-date" name="request-date" required>
+                </div>
+                <button type="submit">Submit Request</button>
+            </form>
+        </section>
+
+       
+    </main>
+
+
+    <footer style="background-color: #2c3e50; color: #fff; padding: 10px; text-align: center;">
+        <div style="margin-bottom: 10px;">
+            <span>&copy; 2024 Nakungu Esther. All rights reserved.</span>
+        </div>
+    </footer>
+    <script src="assets/js/sales.js"></script>
+</body>
+
+</html>

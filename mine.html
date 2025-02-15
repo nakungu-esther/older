@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Dashboard Overview</title>
+    <link rel="stylesheet" href="assets/css/mine.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <img style="width: 40px; height: 40px; border-radius: 50%;" src="assets/images/download (3).png">
+        <div class="manager-profile">
+            <span class="manager-name">Welcome, Manager</span>
+            <a href="index.html">Logout</a>
+        </div>
+    </header>
+    <main>
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#"> <i class="fas fa-clipboard-list" style="padding-right:9px;"></i>Overview</a></li>
+                    <li><a href="/manager.html">  <i class="fas fa-file-archive" style="padding-right:9px;"></i> Records Procument </a></li>
+                    <li><a href="#">  <i class="fas fa-chart-bar" style="padding-right:9px;"></i>Total Sales</a></li>
+                    <li><a href="#">  <i class="fas fa-bell" style="padding-right:9px;"></i>Update Sales</a></li>
+                
+                </ul>
+            </nav>
+        </aside>
+    </main>
+
+    <div class="dashboard">
+        <h1>Manager Dashboard Overview</h1>
+        
+        <div class="overview-row">
+            <div class="card">
+                <h2>Total Procurements</h2>
+                <p id="total-procurements">150</p>
+            </div>
+            <div class="card">
+                <h2>Total Sales</h2>
+                <p id="total-sales">120</p>
+            </div>
+            <div class="card">
+                <h2>Total Stock</h2>
+                <p id="total-stock">500 kg</p>
+            </div>
+            
+        </div>
+
+        <!-- <button class="add-btn">Add New Record</button> -->
+
+        <div class="charts">
+            <div class="chart-container">
+                <h2>Procurement Trends</h2>
+                <canvas id="procurement-trends-chart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>Sales Distribution</h2>
+                <canvas id="sales-distribution-chart"></canvas>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer style="background-color: #2c3e50; color: #fff; padding: 20px; text-align: center;">
+     
+        <div style="margin-bottom: 10px;">
+          <span>&copy; 2024 Nakungu Esther. All rights reserved.</span>
+        </div>
+  
+      </footer>
+
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/mine.js"></script>
+</body>
+</html>

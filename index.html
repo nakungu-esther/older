@@ -8,232 +8,207 @@
   <!-- <link rel="stylesheet" href="assets/bootstrap-5.3.3-dist/css/bootstrap.css"> -->
   <!-- <link rel="stylesheet" href="assets/css/main.css"> -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
   <link rel="stylesheet" href="assets/css/cereals.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-  <!-- <div class="background-image"> -->
+  <header>
+    <img style="width: 40px; height: 40px; border-radius: 50%;" src="assets/images/download (3).png">
+    <div class="agent-profile">
+      <span class="agent-name">Welcome page</span>
+  </header>
+  </div>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
 
-    <nav>
-      <input type="checkbox" id="check">
-      <label for="check">
-        <i class="fas fa-bars" id="btn"></i>
-        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="siderbar">
+      <img style="width: 40px; height: 40px; border-radius: 50%;" src="assets/images/download (3).png">
+      <ul>
+        <li><a href="index.html"><i class="fas fa-stream"></i> Home</a></li>
+        <li><a href="login.html"><i class="fas fa-qrcode"></i> Admin</a></li>
+        <li><a href="login.html"><i class="fas fa-qrcode slider-h"></i> manager</a></li>
+        <li><a href="login.html"><i class="fas fa-qrcode"></i> SalesAgent</a></li>
 
-      </label>
-      <div class="siderbar">
-        <img style="width: 40px; height: 40px; border-radius: 50%;" src="assets/images/download (3).png">
-        <ul>
-          <li><a href="index.html"><i class="fas fa-stream"></i> Home</a></li>
-          <li><a href="dashboard.html"><i class="fas fa-qrcode"></i> Admin</a></li>
-          <li><a href="manager.html"><i class="fas fa-qrcode slider-h"></i> manager</a></li>
-          <li><a href="sales.html"><i class="fas fa-qrcode"></i> SalesAgent</a></li>
+      </ul>
+      <!-- <a href="index.html" class="logout-btn">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </a> -->
+  </nav>
 
-        </ul>
-        <a href="index.html" class="logout-btn">
-          <i class="fas fa-sign-out-alt"></i> Logout
-        </a>
-    </nav>
 
-    <div class="login-button container-fluid">
-      <h1></h1>
-      <a href="login.html" class="btn btn-primary custom-button">Login</a>
+  </div>
+
+  </haeder>
+
+  <main id="main">
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to ultimate Happy Hoe grocery</h1>
+        <p> Our innovative web application is designed<br> to make grocery work easier, you can browse our vast
+          selection
+          of products.
+        </p>
+        <!-- <button class="cta-button">view</button> -->
+      </div>
+    </section>
+
+    <section class="featured-products">
+      <h2>Categories</h2>
+      <br>
+      <br>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="assets/images/product1.jpg" alt="Product 1">
+          <h3>Fruits</h3>
+          <p> Freshness guaranteed, with regular deliveries and quality control
+            .</p>
+
+        </div>
+        <div class="product-card">
+          <img src="assets/images/images.jpeg" alt="Product 2">
+          <h3>Grains</h3>
+          <p> Gluten-free options like rice, corn, and millet, catering to dietary needs
+            ct.</p>
+
+        </div>
+        <div class="product-card">
+          <img src="assets/images/product3.jpeg" alt="Product 3">
+          <h3>Sea Food</h3>
+          <p> Fresh catches: salmon, tilapia, cod, shrimp, scallops, and more
+            .</p>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <section id="stock" class="py-5">
+    <div class="text-center" style="color: hsl(30, 3%, 11%);">
+      <h2>Grain stock</h2>
+    </div>
+    <br>
+    <br>
+    <div class="statistics container-fluid">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a style="text-decoration: none;" href="/beans.html">
+              <div class="card mb-4">
+                <img src="assets/images/stock2.webp" style="width:266px;height: 200px; " class="card-img-top"
+                  alt="..." />
+                <div class="card-body">
+                  <h3 class="card-title">BEANS</h3>
+                  <button>View More</button>
+
+                </div>
+              </div>
+            </a>
+          </div>
+          <br>
+          <br>
+          <div class="swiper-slide">
+            <a style="text-decoration: none;" href="/rice.html">
+              <div class="card mb-4">
+                <img src="assets/images/j.jpg" style="width: 299px; height:200px;" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h3 class="card-title">RICE</h3>
+                  <button>View More</button>
+
+                </div>
+              </div>
+            </a>
+          </div>
+          <br>
+          <br>
+
+          <div class="swiper-slide">
+            <a style="text-decoration: none;" href="/maize.html">
+              <div class="card mb-4">
+                <img src="assets/images/download (8).jpeg" style="width: 299px;height: 200px;" class="card-img-top"
+                  alt="Maize Image" />
+                <div class="card-body">
+                  <h3 class="card-title">MAIZE</h3>
+                  <button>View More</button>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <br>
+          <br>
+          <div class="swiper-slide">
+            <a style="text-decoration: none;" href="/cowpeas.html">
+              <div class="card mb-4">
+                <img src="assets/images/images (8).jpeg" style="width: 299px; height:200px;" class="card-img-top"
+                  alt="..." />
+                <div class="card-body">
+                  <h3 class="card-title">PEAS</h3>
+                  <button>View More</button>
+
+                </div>
+              </div>
+            </a>
+          </div>
+          <br>
+          <br>
+          <div class="swiper-slide">
+            <a style="text-decoration: none;" href="/g.nuts.html">
+              <div class="card mb-4">
+                <img src="assets/images/download (10).jpeg" style="width: 299px; height:200px;" class="card-img-top"
+                  alt="..." />
+                <div class="card-body">
+                  <h3 class="card-title">G.NUTS</h3>
+                  <button>View More</button>
+
+                </div>
+              </div>
+            </a>
+          </div>
+          <br>
+          <br>
+
+        </div>
+      </div>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script>
+        var swiper = new Swiper('.mySwiper', {
+          slidesPerView: 4,
+          spaceBetween: 10,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          loop: true, // Enable continuous loop mode
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+        });
+      </script>
     </div>
 
 
-    </haeder>
-
-    <main>
-    
-      <section class="hero">
-        <div class="hero-content">
-          <h1>"Welcome to ultimate Happy Hoe grocery web application</h1>
-          <p> Our innovative web application is designed to make grocery work easier, you can browse our vast selection
-            of products.
-          </p>
-          <button class="cta-button">view</button>
-        </div>
-      </section>
-  
-      <section class="featured-products">
-        <h2>Categories</h2>
-        <br>
-        <br>
-        <div class="product-grid">
-          <div class="product-card">
-            <img src="assets/images/product1.jpg" alt="Product 1">
-            <h3>Fruits</h3>
-            <p> Freshness guaranteed, with regular deliveries and quality control
-              .</p>
-
-          </div>
-          <div class="product-card">
-            <img src="assets/images/images.jpeg" alt="Product 2">
-            <h3>Grains</h3>
-            <p> Gluten-free options like rice, corn, and millet, catering to dietary needs
-              ct.</p>
-
-          </div>
-          <div class="product-card">
-            <img src="assets/images/product3.jpeg" alt="Product 3">
-            <h3>Sea Food</h3>
-            <p> Fresh catches: salmon, tilapia, cod, shrimp, scallops, and more
-              .</p>
-
-          </div>
-        </div>
-      </section>
     </main>
-    <section id="stock" class="py-5">
-      <div class="text-center" style="color: hsl(30, 3%, 11%);">
-        <h2>Grain stock</h2>
+    <br>
+
+    <footer style="background-color: #2c3e50; color: #fff; padding: 20px; text-align: center;">
+     
+      <div style="margin-bottom: 10px;">
+        <span>&copy; 2024 Nakungu Esther. All rights reserved.</span>
       </div>
-      <br>
-      <br>
-      <div class="statistics container-fluid">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a style="text-decoration: none;" href="/beans.html">
-                <div class="card mb-4">
-                  <img src="assets/images/stock2.webp" style="width:266px;height: 200px; " class="card-img-top"
-                    alt="..." />
-                  <div class="card-body">
-                    <h3 class="card-title">BEANS</h3>
 
-                    <!-- <p class="card-text">
-                    Some quick example text to build on the card title and make up
-                    the bulk of the card's content.
-                  </p> -->
-                  </div>
-                </div>
-              </a>
-            </div>
-            <br>
-            <br>
-            <div class="swiper-slide">
-              <a style="text-decoration: none;" href="/rice.html">
-                <div class="card mb-4">
-                  <img src="assets/images/j.jpg" style="width: 299px; height:200px;" class="card-img-top" alt="..." />
-                  <div class="card-body">
-                    <h3 class="card-title">RICE</h3>
-                    <button>View More</button>
-                    <!-- <p class="card-text">
-                    Some quick example text to build on the card title and make up
-                    the bulk of the card's content.
-                  </p> -->
-                  </div>
-                </div>
-              </a>
-            </div>
-            <br>
-            <br>
-
-            <div class="swiper-slide">
-              <a style="text-decoration: none;" href="/maize .html">
-                <div class="card mb-4">
-                  <img src="assets/images/download (8).jpeg" style="width: 299px;height:200px;" class="card-img-top"
-                    alt="..." />
-                  <div class="card-body">
-                    <h3 class="card-title">MAIZE</h3>
-
-                    <!-- <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p> -->
-                  </div>
-                </div>
-              </a>
-            </div>
-            <br>
-            <br>
-            <div class="swiper-slide">
-              <a style="text-decoration: none;" href="/cowpeas .html">
-                <div class="card mb-4">
-                  <img src="assets/images/images (8).jpeg" style="width: 299px; height:200px;" class="card-img-top"
-                    alt="..." />
-                  <div class="card-body">
-                    <h3 class="card-title">PEAS</h3>
-
-                    <!-- <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p> -->
-                  </div>
-                </div>
-              </a>
-            </div>
-            <br>
-            <br>
-            <div class="swiper-slide">
-              <a style="text-decoration: none;" href="/g.nuts.html">
-                <div class="card mb-4">
-                  <img src="assets/images/download (10).jpeg" style="width: 299px; height:200px;" class="card-img-top"
-                    alt="..." />
-                  <div class="card-body">
-                    <h3 class="card-title">G.NUTS</h3>
-
-                    <!-- <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p> -->
-                  </div>
-                </div>
-              </a>
-            </div>
-            <br>
-            <br>
-            <!-- Add Pagination if needed -->
-            <!--<div class="swiper-pagination"></div>-->
-          </div>
-        </div>
+    </footer>
 
 
-
-
-
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script>
-          var swiper = new Swiper('.mySwiper', {
-            slidesPerView: 4,
-            spaceBetween: 10,
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-            },
-            loop: true, // Enable continuous loop mode
-            autoplay: {
-              delay: 2500,
-              disableOnInteraction: false,
-            },
-          });
-        </script>
-      </div>
-  
-
-   </main>
-   <br>
-  
-  <footer style="background-color: #042331; color: #fff; padding: 20px; text-align: center;">
-    <div style="margin-bottom: 10px;">
-      <a style="color: #bbb; text-decoration: none; margin-right: 15px;">Privacy Policy</a>
-      <a style="color: #bbb; text-decoration: none; margin-right: 15px;">Terms of Service</a>
-
-    </div>
-    <div style="margin-bottom: 10px;">
-      <span>&copy; 2024 Happy Hoe Grocery Ltd. All rights reserved.</span>
-    </div>
-    <div>
-      <span>Developed by Nakungu Esther| Version 1.0.0</span>
-    </div>
-  </footer>
-
-
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
 
 </body>
 

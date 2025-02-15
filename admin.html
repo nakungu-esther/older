@@ -1,71 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-     <div class="container">
-       <div style="width: 1000px;" class="video-container">
-        <video class="fullscreen-video" controls autoplay loop muted>
-          <source src="assets/images/202407301926 (3).mp4" type="video/mp4">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Grocery Store</title>
+    <link rel="stylesheet" href="assets/css/admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  </head>
 
-        </video>
+  <body>
+    <header>
+      <img
+        style="width: 40px; height: 40px; border-radius: 50%"
+        src="assets/images/download (3).png"
+        alt="Profile Picture"
+      />
+      <div class="admin-profile">
+        <span class="admin">Welcome, CEO</span>
+        <a href="index.html">Logout</a>
       </div>
-      <div class="chart-container">
-        <h3 class="chart"> Stock Status Pie Chart</h3>
-        <canvas id="groceryStockChart" width="400" height="400"></canvas>
+    </header>
+
+    <div style="display: flex; flex: 1">
+      <aside class="sidebar">
+        <nav>
+          <ul>
+            <li>
+              <a href="#"
+                ><i class="fas fa-chart-pie" style="padding-right: 9px"></i
+                >Overview</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-tasks" style="padding-right: 9px"></i>
+                </a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-archive" style="padding-right: 9px"></i
+                >Procurements</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-dollar-sign" style="padding-right: 9px"></i
+                >Sales Overview</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-envelope-open" style="padding-right: 9px"></i
+                >Messages</a
+              >
+            </li>
+            <li>
+              <a href="#" id="notificationButton">
+                <i class="fas fa-bell" style="padding-right: 9px"></i>
+                Notifications
+                <span id="notificationCount" class="notification-count">0</span>
+              </a>
+              <div id="notificationPopup" class="notification-popup">
+                <p>No new notifications</p>
+              </div>
+            </li>
+            
+            
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+    <main>
+      <div class="main-cards">
+        <div class="card">
+          <div class="card-inner">
+            <p class="text-primary">Products</p>
+            <span class="material-icons-outlined text-green icon-right"></span>
+          </div>
+          <span class="text-primary font-weight-bold">90%</span>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <p class="text-primary">Procurements</p>
+            <span class="material-icons-outlined text-blue icon-right"></span>
+          </div>
+          <span class="text-primary font-weight-bold">240%</span>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <p class="text-primary">Sales</p>
+            <span class="material-icons-outlined text-orange icon-right"></span>
+          </div>
+          <span class="text-primary font-weight-bold">83%</span>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <p class="text-primary">Credit Sales</p>
+            <span class="material-icons-outlined text-green icon-right"></span>
+          </div>
+          <span class="text-primary font-weight-bold">79%</span>
+        </div>
       </div>
-      <script>
-        // Data for the pie chart
-        const data = {
-          labels: ['Beans', 'Maize', 'G.nuts', 'Peas', 'Yellow Beans'],
-          datasets: [{
-            label: 'Grocery Stock',
-            data: [60, 40, 20, 35, 15], // Example stock values
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(153, 102, 255, 0.2)'
-            ],
-            borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)'
-            ],
-            borderWidth: 1
-          }]
-        };
+      
 
-        // Configuration for the pie chart
-        const config = {
-          type: 'pie',
-          data: data,
-          options: {
-            responsive: true,
-            plugins: {
-              legend: {
-                position: 'top',
-              },
-              tooltip: {
-                enabled: true
-              }
-            }
-          }
-        };
+      <div class="charts">
+        <div class="charts-card">
+          <p class="chart-title">Top 5 Products</p>
+          <div id="bar-chart"></div>
+        </div>
+        <br>
+        <br>
+        <div class="charts-card">
+          <p class="chart-title">Sales Orders Over Time</p>
+          <div id="area-chart"></div>
+        </div>
+      </div>
 
-        // Render the pie chart
-        const groceryStockChart = new Chart(
-          document.getElementById('groceryStockChart'),
-          config
-        );
+ 
+    </main>
 
-      </script>
-    </div> 
-</body>
+    <footer style="background-color: #2c3e50; color: #fff; padding: 10px; text-align: center;">
+      <div style="margin-bottom: 10px;">
+          <span>&copy; 2024 Nakungu Esther. All rights reserved.</span>
+      </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.52.0/apexcharts.min.js"
+    ></script>
+    <script src="assets/js/admin.js"></script>
+  </body>
 </html>
